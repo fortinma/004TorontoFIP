@@ -92,13 +92,13 @@
 	minZoom: 1,
 	maxZoom: 16,
 	ext: 'jpg'
-}).addTo(map);
+});
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .className += ' fa fa-search';
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{"004_modified": layer_004_modified_2,"OSM Standard": layer_OSMStandard_1,"Satellite": layer_Satellite_0,}).addTo(map);
+        L.control.layers(baseMaps,{"004_modified": layer_004_modified_2,"Stamen colour": Stamen_Watercolor, "OSM Standard": layer_OSMStandard_1,"Satellite": layer_Satellite_0,}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
