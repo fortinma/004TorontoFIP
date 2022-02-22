@@ -49,6 +49,17 @@
         }
         map.createPane('pane_Satellite_0');
         map.getPane('pane_Satellite_0').style.zIndex = 400;
+        var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		subdomains: 'abcd',
+		minZoom: 1,
+		maxZoom: 16,
+		ext: 'jpg'
+	});
+	Stamen_Watercolor;
+	map.addLayer(Stamen_Watercolor);
+	map.createPane('Stamen_Watercolor');
+	map.getPane('Stamen_Watercolor')	
         var layer_Satellite_0 = L.tileLayer('https://api.maptiler.com/maps/hybrid/256/{z}/{x}/{y}@2x.jpg?key=crggkK1JP9n2pzNrEI9t', {
             pane: 'pane_Satellite_0',
             opacity: 1.0,
@@ -60,17 +71,7 @@
         map.addLayer(layer_Satellite_0);
         map.createPane('pane_OSMStandard_1');
         map.getPane('pane_OSMStandard_1').style.zIndex = 401;
-        var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
-		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		subdomains: 'abcd',
-		minZoom: 1,
-		maxZoom: 16,
-		ext: 'jpg'
-	});
-	Stamen_Watercolor;
-	map.addLayer(Stamen_Watercolor);
-	map.createPane('Stamen_Watercolor');
-	map.getPane('Stamen_Watercolor')
+
         var layer_OSMStandard_1 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             pane: 'pane_OSMStandard_1',
             opacity: 1.0,
