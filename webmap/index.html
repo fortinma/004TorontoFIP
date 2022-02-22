@@ -70,7 +70,7 @@
 	Stamen_Watercolor;
 	map.addLayer(Stamen_Watercolor);
 	map.createPane('Stamen_Watercolor');
-	map.getPane('Statmen_Watercolor').style.zIndex = 402
+	map.getPane('Stamen_Watercolor').style.zIndex = 402
         var layer_OSMStandard_1 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             pane: 'pane_OSMStandard_1',
             opacity: 1.0,
@@ -102,7 +102,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{"004_modified": layer_004_modified_2,"Stamen colour": Stamen_Watercolor, "OSM Standard": layer_OSMStandard_1,"Satellite": layer_Satellite_0,}).addTo(map);
+        L.control.layers(baseMaps,{"004_modified": layer_004_modified_2, "Stamen colour": Stamen_Watercolor, "OSM Standard": layer_OSMStandard_1,"Satellite": layer_Satellite_0,}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
